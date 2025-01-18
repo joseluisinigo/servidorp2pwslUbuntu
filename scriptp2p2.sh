@@ -1,6 +1,36 @@
 #!/bin/bash
 
 ###############################################################################
+# Transmission Configuration Script for WSL2
+#
+# Author: José Luis Íñigo a.k.a. Riskoo
+# GitHub: https://github.com/usuario/servidorp2p
+# License: MIT
+#
+# Description:
+# This script automates the setup of Transmission in WSL2 (Ubuntu),
+# including creating a torrent file, configuring Transmission, and setting
+# up a port proxy on Windows for local network access.
+#
+# Features:
+# - Installs and configures Transmission (daemon and CLI)
+# - Creates a .torrent file with public trackers
+# - Sets up RPC authentication and permissions
+# - Guides Windows users to configure portproxy for WSL2
+# - Ensures DHT, PEX, and LSD are enabled for optimized peer discovery
+#
+# Usage:
+# 1. Run the script with root privileges: sudo bash scriptp2p.sh
+# 2. Follow the interactive prompts to configure Transmission and the torrent
+# 3. Access Transmission's Web UI at: http://<WSL_IP>:9092
+#
+# Requirements:
+# - WSL2 with Ubuntu 20.04+ installed
+# - Internet access for package installation
+# - Administrative privileges in WSL2 and Windows
+###############################################################################
+
+###############################################################################
 # Script para configurar Transmission en WSL y guiar la creación
 # de la regla netsh portproxy en Windows, de forma dinámica.
 #
